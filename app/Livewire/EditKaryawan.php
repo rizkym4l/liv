@@ -7,15 +7,15 @@ use App\Models\Karyawan;
 
 class EditKaryawan extends Component
 {
-   public $id;
-   public $nama;
-   public $tempatLahir;
-   public $tanggalLahir;
-   public $nik;
-   public $noTelp;
-   public $agama;
-   public $status;
-   
+    public $id;
+    public $nama;
+    public $tempatLahir;
+    public $tanggalLahir;
+    public $nik;
+    public $noTelp;
+    public $agama;
+    public $status;
+
 
     public function mount($id)
     {
@@ -33,16 +33,18 @@ class EditKaryawan extends Component
     }
     public function render()
     {
-      
+
         $karyawan = Karyawan::find($this->id);
-// dd($karyawan);
-        return view('livewire.edit-karyawan',
-    ['karyawan' => $karyawan]);
+
+        return view(
+            'livewire.edit-karyawan',
+            ['karyawan' => $karyawan]
+        );
     }
 
     public function update()
     {
-        Karyawan::where('id',$this->id)->update([
+        Karyawan::where('id', $this->id)->update([
             'nama' => $this->nama,
             'tempat_lahir' => $this->tempatLahir,
             'tanggal_lahir' => $this->tanggalLahir,
@@ -50,9 +52,9 @@ class EditKaryawan extends Component
             'no_telp' => $this->noTelp,
             'status' => $this->status,
             'agama' => $this->agama,
-            
-                ]);
-               
-                redirect('table')->with('success','success Update');
+
+        ]);
+
+        redirect('table')->with('success', 'success Update');
     }
 }

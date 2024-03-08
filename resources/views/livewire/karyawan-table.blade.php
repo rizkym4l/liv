@@ -57,10 +57,11 @@
 
                         </td>
                         <td class="px-6 py-4">
-                            <a  href="{{route('edit',$item->id)}}"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline" data-modal-target="crud-modal" data-modal-toggle="crud-modal">Edit</a>
-                                
-                            <a href="#" wire:click='delete({{$item->id}})'
+                            <a href="{{ route('edit', $item->id) }}"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                                data-modal-target="crud-modal" data-modal-toggle="crud-modal">Edit</a>
+
+                            <a href="#" wire:click='delete({{ $item->id }})'
                                 class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
                         </td>
                     </tr>

@@ -14,8 +14,8 @@ class KaryawanSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create(); 
-        
+        $faker = Faker::create();
+
         for ($i = 0; $i < 10; $i++) {
             Karyawan::create([
                 'nama' => $faker->name,
