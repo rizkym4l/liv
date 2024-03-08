@@ -43,6 +43,7 @@ class AddKaryawan extends Component
         $this->status = null;
         $this->agama = null;
 
+        $this->dispatch('store');
         redirect('/')->with('success', 'User created successfully');
 
 

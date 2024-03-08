@@ -7,7 +7,7 @@ use App\Models\Karyawan;
 
 class KaryawanTable extends Component
 {
-
+protected $listener = ['store','edit'];
     public function render()
     {
         $karyawan = Karyawan::paginate(8);

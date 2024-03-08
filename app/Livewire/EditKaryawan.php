@@ -54,7 +54,7 @@ class EditKaryawan extends Component
             'agama' => $this->agama,
 
         ]);
-
+        $this->dispatch('edit');
         redirect('table')->with('success', 'success Update');
     }
 }
