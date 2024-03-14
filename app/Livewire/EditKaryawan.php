@@ -3,38 +3,42 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Karyawan;
+use App\Models\Employee;
 
 class EditKaryawan extends Component
 {
     public $id;
-    public $nama;
-    public $tempatLahir;
-    public $tanggalLahir;
+    public $name;
+    public $birthPlace;
+    public $birthDate;
     public $nik;
-    public $noTelp;
-    public $agama;
+    public $phoneNumber;
+    public $religion;
     public $status;
 
 
     public function mount($id)
     {
-        $karyawan = Karyawan::find($this->id);
+
+  
+      
+  
+        $karyawan = Employee::find($this->id);
 
 
-        $this->nama = $karyawan->nama;
-        $this->tempatLahir = $karyawan->tempat_lahir;
-        $this->tanggalLahir = $karyawan->tanggal_lahir;
+        $this->name = $karyawan->name;
+        $this->birthPlace = $karyawan->birth_place;
+        $this->birthDate = $karyawan->birth_date;
         $this->nik = $karyawan->nik;
-        $this->noTelp = $karyawan->no_telp;
-        $this->agama = $karyawan->agama;
+        $this->phoneNumber = $karyawan->phone_number;
+        $this->religion = $karyawan->religion;
         $this->status = $karyawan->status;
         $this->id = $id;
     }
     public function render()
     {
 
-        $karyawan = Karyawan::find($this->id);
+        $karyawan = Employee::find($this->id);
 
         return view(
             'livewire.edit-karyawan',
@@ -44,14 +48,14 @@ class EditKaryawan extends Component
 
     public function update()
     {
-        Karyawan::where('id', $this->id)->update([
-            'nama' => $this->nama,
-            'tempat_lahir' => $this->tempatLahir,
-            'tanggal_lahir' => $this->tanggalLahir,
+        Employee::where('id', $this->id)->update([
+            'name' => $this->name,
+            'birth_place' => $this->birthPlace,
+            'birth_date' => $this->birthDate,
             'nik' => $this->nik,
-            'no_telp' => $this->noTelp,
+            'phone_number' => $this->phoneNumber,
             'status' => $this->status,
-            'agama' => $this->agama,
+            'religion' => $this->religion,
 
         ]);
         $this->dispatch('edit');

@@ -1,3 +1,9 @@
+ 
+
+
+
+   
+
 @extends('layouts.app')
 
 @push('styles')
@@ -17,9 +23,15 @@
     <span>
         @if (session()->has('success'))
             <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:text-green-400" role="alert">
-                <span class="font-medium">Success alert!</span> {{ session('success') }}
+                <span class="font-medium">Success alert!</span> Berhasil nambah
             </div>
-            
         @endif
-        @livewire('karyawan-table')
-    @endsection
+    </span>
+
+    @livewire('dahsboard-panel')
+
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dist/js/script.js"></script>
+@endsection

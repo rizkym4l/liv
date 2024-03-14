@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Employee;
 use App\Models\Karyawan;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,14 +18,14 @@ class KaryawanSeeder extends Seeder
         $faker = Faker::create();
 
         for ($i = 0; $i < 10; $i++) {
-            Karyawan::create([
-                'nama' => $faker->name,
-                'tempat_lahir' => $faker->city,
-                'tanggal_lahir' => $faker->date,
+            Employee::create([
+                'name' => $faker->name,
+                'birth_place' => $faker->city,
+                'birth_date' => $faker->date,
                 'nik' => $faker->numerify('##############'),
-                'no_telp' => $faker->phoneNumber,
+                'phone_number' => $faker->phoneNumber,
                 'status' => $faker->randomElement(['sudah', 'belum']),
-                'agama' => $faker->randomElement(['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha']),
+                'religion' => $faker->randomElement(['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha']),
             ]);
         }
     }

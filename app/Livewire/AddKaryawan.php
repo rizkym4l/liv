@@ -2,17 +2,18 @@
 
 namespace App\Livewire;
 
-use App\Models\Karyawan;
+use App\Models\Employee;
 use Livewire\Component;
 
 class AddKaryawan extends Component
 {
-    public $nama;
-    public $tempatLahir;
-    public $tanggalLahir;
+    public $id;
+    public $name;
+    public $birthPlace;
+    public $birthDate;
     public $nik;
-    public $noTelp;
-    public $agama;
+    public $phoneNumber;
+    public $religion;
     public $status;
     public function render()
     {
@@ -25,26 +26,26 @@ class AddKaryawan extends Component
     {
 
 
-        Karyawan::create([
-            'nama' => $this->nama,
-            'tempat_lahir' => $this->tempatLahir,
-            'tanggal_lahir' => $this->tanggalLahir,
+        Employee::create([
+            'name' => $this->name,
+            'birth_place' => $this->birthPlace,
+            'birth_date' => $this->birthDate,
             'nik' => $this->nik,
-            'no_telp' => $this->noTelp,
+            'phone_number' => $this->phoneNumber,
             'status' => $this->status,
-            'agama' => $this->agama,
+            'religion' => $this->religion,
 
         ]);
-        $this->nama = null;
-        $this->tempatLahir = null;
-        $this->tanggalLahir = null;
+        $this->name = null;
+        $this->birthPlace = null;
+        $this->birthDate = null;
         $this->nik = null;
-        $this->noTelp = null;
+        $this->phoneNumber = null;
         $this->status = null;
-        $this->agama = null;
+        $this->religion = null;
 
         $this->dispatch('store');
-        redirect('/')->with('success', 'User created successfully');
+        redirect('/table')->with('success', 'User created successfully');
 
 
     }

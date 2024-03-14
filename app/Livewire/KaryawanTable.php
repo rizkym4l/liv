@@ -3,14 +3,15 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Karyawan;
+use App\Models\Employee;
 
 class KaryawanTable extends Component
 {
 protected $listener = ['store','edit'];
+public  $search = '';
     public function render()
     {
-        $karyawan = Karyawan::paginate(8);
+        $karyawan = Employee::where('name','like','%' . $this->search . '%')->simplePaginate(8);
         return view('livewire.karyawan-table', [
             'karyawan' => $karyawan
         ]);
@@ -18,8 +19,11 @@ protected $listener = ['store','edit'];
 
     public function delete($id)
     {
-        $karyawan = Karyawan::find($id);
+        $karyawan = Employee::find($id);
         $karyawan->delete();
         redirect('table')->with('success', 'Successfully deleted');
+    }
+    public function updatingSearch(){
+        $this->reset();
     }
 }

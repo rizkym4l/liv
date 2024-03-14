@@ -22,9 +22,7 @@
         @endif
     </span>
 
-    @livewire('edit-karyawan', [
-        'id' => $id,
-    ]);
+    @livewire('edit-karyawan',['id' => $id])
 
     </div>
 @endsection
