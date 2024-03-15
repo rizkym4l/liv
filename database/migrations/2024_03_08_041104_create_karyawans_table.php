@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('karyawans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 100);
-            $table->string('tempat_lahir', 100);
-            $table->date('tanggal_lahir');
-            $table->string('nik', 100);
-            $table->string('no_telp', 100);
-           $table->enum('status', ['sudah', 'belum']);
+            $table->string('nama')->default('John Doe');
+            $table->string('jabatan')->default('Manager Keuangan');
+            $table->string('departemen')->default('Keuangan');
+            $table->date('tanggal_bergabung')->default('2010-04-01');
             $table->timestamps();
         });
     }

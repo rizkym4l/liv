@@ -1,6 +1,7 @@
 <div class=" border-2 shadow-lg rounded-md h-full md:w-max px-28 py-5 md:py-20 mx-auto bg-gray-800 text-white">
 
-
+  
+      
     <h1 class=" font-bold text-center ">Edit karyawan </h1>
     <form class="max-w-md mx-auto  " wire:submit.prevent='update'>
         <div class="relative z-0 w-full mt-5 mb-5 group">

@@ -44,7 +44,7 @@
                                         <div class="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </a>
-                            </li>
+                        </li>
                             <li>
                                 <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">

@@ -19,13 +19,13 @@ class KaryawanSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++) {
             Employee::create([
-                'name' => $faker->name,
-                'birth_place' => $faker->city,
-                'birth_date' => $faker->date,
+                'nama' => $faker->name,
+                'tempat_lahir' => $faker->city,
+                'tanggal_lahir' => $faker->date,
                 'nik' => $faker->numerify('##############'),
-                'phone_number' => $faker->phoneNumber,
+                'no_telp' => $faker->phoneNumber,
                 'status' => $faker->randomElement(['sudah', 'belum']),
-                'religion' => $faker->randomElement(['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha']),
+                'agama' => $faker->randomElement(['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha']),
             ]);
         }
     }

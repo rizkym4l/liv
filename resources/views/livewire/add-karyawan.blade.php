@@ -1,72 +1,93 @@
-<div class=" border-2 shadow-lg rounded-md h-full md:w-max px-28 py-5 md:py-20 mx-auto bg-gray-800 text-white">
+<div class="w-full mx-auto bg-white shadow-md rounded-md p-6">
+  
 
 
-    <h1 class=" font-bold text-center ">Add karyawan </h1>
-    <form class="max-w-md mx-auto  " wire:submit.prevent='store'>
-        <div class="relative z-0 w-full mt-5 mb-5 group">
-            <input name="floating_name" id="floating_name"
-                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white font-medium dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " wire:model.live='name' required />
-            <label for="floating_name"
-                class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nama</label>
-        </div>
-        {{-- <p>{{$name}}</p> --}}
-        <div class="grid md:grid-cols-2 md:gap-6">
-            <div class="relative z-0 w-full mb-4 md:mb-0   group">
-                <input type="text" name="floating_first_name" id="floating_first_name"
-                    class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=" " required wire:model.live='birthPlace' />
-                <label for="floating_first_name"
-                    class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Tempat
-                    lahir</label>
-            </div>
-            <div class="relative z-0 w-full   group">
-                <input type="date" name="floating_date" id="floating_date"
-                    class="block py-2.5 px-0 w-full text-sm text-white font-medium bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=" " wire:model.live='birthDate' required />
-                <label for="floating_date"
-                    class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Tanggal
-                    lahir</label>
-            </div>
-        </div>
-        <div class="relative z-0 w-full mt-5 mb-5 group">
-            <input name="floating_email" id="floating_email"
-                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white font-medium dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " wire:model.live='nik' required />
-            <label for="floating_email"
-                class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nik</label>
-        </div>
-        <div class="relative z-0 w-full mt-5 mb-5 group">
-            <input name="floating_password" id="floating_password"
-                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " wire:model.live='phoneNumber' required />
-            <label for="floating_password"
-                class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">No
-                telp</label>
-        </div>
-        <div class="relative z-0 w-full mt-5 mb-5 group">
-            <input name="repeat_password" id="floating_repeat_password"
-                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text dark:border-gray-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " wire:model.live='religion' required />
-            <label for="floating_repeat_password"
-                class="peer-focus:font-medium absolute text-sm text-white font-medium  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Agama</label>
-        </div>
 
-        <div class="grid md:grid-cols-1 md:gap-6">
-            <div class="relative z-0 w-full mt-2  mb-5 group">
-                <select id="underline_select"
-                    class="block text-white bg-gray-800 font-medium py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-200 appearance-none  dark:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-200 peer "
-                    wire:model.live='status'>
-                    <option selected>Status nikah </option>
-                    <option value="sudah">Sudah</option>
-                    <option value="belum">Belum</option>
+    <h2 class="text-xl font-semibold mb-4">Add karyawan</h2>
+    <form wire:submit='store'>
+      <div class="mb-4">
+        <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+        <input type="text"  class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:model.live='nama' placeholder="asep"  >
+      </div>
+      <div class="mb-4">
+        <label for="jabatan" class="block text-sm mb-1 font-medium text-gray-700">Jabatan</label>
+        <select id="countries" wire:model.live='jabatan' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option selected>Pilih jabatan</option>
+          <option value="Direksi">Direksi</option>
+          <option value="DirekturUtama">Direktur Utama</option>
+          <option value="Direktur">Direktur</option>
+          <option value="Manajer">Manajer</option>
+          <option value="Adminnistrasi">Adminnistrasi</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="departemen" class="block mb-1 text-sm font-medium text-gray-700">Departemen</label>
+        <select id="countries" wire:model.live='departement' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option selected>Pilih departemen</option>
+          <option value="Keuangan">Keuangan</option>
+          <option value="HRD">HRD</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Produksi">Produksi</option>
+          <option value="IT">IT</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="tanggal_bergabung" class="block text-sm font-medium text-gray-700">Tanggal Bergabung</label>
+        <input type="date" id="tanggal_bergabung" name="tanggal_bergabung" class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:model.live='tanggalBergabung' placeholder=" 1 april 2020" >
+      </div>
+      <!-- Data Detail -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Informasi Kontak:</label>
+        <textarea class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:model.live='informasiKontak' >
+           
+  Alamatmu ,  Nomor teleponmu ,  Emailmu
+        </textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Informasi Pekerjaan:</label>
+        <textarea class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  wire:model.live='informasiPekerjaan' >
+          Status Karyawan:(tetap/tidak) , Gajimu , Atasanmu Langsung
+        </textarea>
+      </div>
+      @error('informasiPekerjaan') <span class="error text-red-500">{{ $message }}</span>  @enderror
 
-                </select>
-            </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Informasi Performa:</label>
+        <textarea class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  wire:model.live='informasiPerforma' >
+  Evaluasi Kinerja: (Tahun: 20.. : 4,5/5) , Penghargaan: (Karyawan Terbaik Juni 2023,karyawan sabeb)
+        </textarea>
+      </div>
+      @error('dataKeluarga') <span class="error text-red-500">{{ $message }}</span> @enderror
 
-        </div>
-        <button type="submit"
-            class="text-white mt-3  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+      
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Informasi Tambahan:</label>
+        <textarea class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  wire:model.live='informasiTambahan' >
+  Asuransi Kesehatanmu ,Dana Pensiunmu
+        </textarea>
+      </div>
+      @error('dataKeluarga') <span class="error text-red-500">{{ $message }}</span> @enderror
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Data Keluarga:</label>
+        <textarea class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  wire:model.live='dataKeluarga' >
+  Status Perkawinan:(menikah,belum) , Jumlah Anakmu
+        </textarea>
+        
+      </div>
+      @error('dataKeluarga') <span class="error text-red-500">{{ $message }}</span> @enderror
+      <div class="flex justify-end">
+        <button type="submit" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Simpan</button>
+
+      </div>
+
+
     </form>
+    
 
-</div>
+<hr class=" fill-white mt-10 mb-10">
+Contoh :
+
+<img class=" mt-5" src="{{asset('image.png')}}" alt="">
+  </div>
+  

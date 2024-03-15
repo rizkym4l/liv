@@ -26,12 +26,12 @@ class EditKaryawan extends Component
         $karyawan = Employee::find($this->id);
 
 
-        $this->name = $karyawan->name;
-        $this->birthPlace = $karyawan->birth_place;
-        $this->birthDate = $karyawan->birth_date;
+        $this->name = $karyawan->nama;
+        $this->birthPlace = $karyawan->tempat_lahir;
+        $this->birthDate = $karyawan->tanggal_lahir;
         $this->nik = $karyawan->nik;
-        $this->phoneNumber = $karyawan->phone_number;
-        $this->religion = $karyawan->religion;
+        $this->phoneNumber = $karyawan->no_telp;
+        $this->religion = $karyawan->agama;
         $this->status = $karyawan->status;
         $this->id = $id;
     }
@@ -49,13 +49,13 @@ class EditKaryawan extends Component
     public function update()
     {
         Employee::where('id', $this->id)->update([
-            'name' => $this->name,
-            'birth_place' => $this->birthPlace,
-            'birth_date' => $this->birthDate,
+            'nama' => $this->name,
+            'tempat_lahir' => $this->birthPlace,
+            'tanggal_lahir' => $this->birthDate,
             'nik' => $this->nik,
-            'phone_number' => $this->phoneNumber,
+            'no_telp' => $this->phoneNumber,
             'status' => $this->status,
-            'religion' => $this->religion,
+            'agama' => $this->religion,
 
         ]);
         $this->dispatch('edit');

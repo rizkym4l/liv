@@ -38,20 +38,16 @@
                         Nama
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Tempat lahir
+                        Jabatan
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Tanggal lahir
+                        Departemen
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        nik
+                        Tanggal_bergabung
                     </th>
-                    <th scope="col" class="px-6 py-3">
-                        No telpon
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Status nikah
-                    </th>
+
+
                     <th scope="col" class="px-6 py-3">
                         Action
                     </th>
@@ -63,28 +59,22 @@
                         class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $item->name }}
+                            {{ $item->nama }}
                         </th>
                         <td class="px-6 py-4">
-                            {{ $item->birth_place }}
+                            {{ $item->jabatan }}
 
                         </td>
                         <td class="px-6 py-4">
-                            {{ $item->birth_date }}
+                            {{ $item->departemen }}
 
                         </td>
-                        <td class="px-6 py-4">
-                            {{ $item->nik }}
 
-                        </td>
                         <td>
-                            {{ $item->phone_number }}
+                            {{ $item->tanggal_bergabung }}
 
                         </td>
-                        <td>
-                            {{ $item->status }}
 
-                        </td>
                         <td class="px-6 py-4">
                             <a href="{{ route('edit', $item->id) }}"
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -92,6 +82,9 @@
 
                             <a href="#" wire:click='delete({{ $item->id }})'
                                 class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+
+                            <a href="#" wire:click='deatil({{ $item->id }})'
+                                class="font-medium text-green-600 dark:text-green-500 hover:underline">Detail</a>
                         </td>
                     </tr>
                 @endforeach
@@ -100,7 +93,7 @@
         </table>
         <div class=" mt-5">
 
-            {{$karyawan->links()}}
+            {{ $karyawan->links() }}
         </div>
     </div>
 

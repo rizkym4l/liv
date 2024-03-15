@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function(){
     })->name('dashboard');
     Route::get('/logout', [Login::class, 'logout']);
 });
-
+// 
 
 
 
