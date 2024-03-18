@@ -9,5 +9,5 @@ class FamilyInformation extends Model
 {
     use HasFactory;
     protected $table = 'family_information';
-    protected $fillable = ['employee_id', 'status_perkawinan', 'jumlah_anak'];
+    protected $fillable = ['employee_id', 'married_status', 'total_children'];
 }

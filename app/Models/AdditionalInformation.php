@@ -9,5 +9,5 @@ class AdditionalInformation extends Model
 {
     use HasFactory;
     protected $table = 'additional_information';
-    protected $fillable = ['employee_id','asuransi_kesehatan','dana_pensiun'];
+    protected $fillable = ['employee_id','health_insurance','pension_fund'];
 }

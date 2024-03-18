@@ -14,33 +14,33 @@ return new class extends Migration
         Schema::create('employee_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained()->onDelete('cascade');
-            $table->string('status_karyawan');
-            $table->decimal('gaji', 10, 2);
-            $table->string('atasan_langsung');
+            $table->string('karyawan_status');
+            $table->decimal('salary', 10, 2);
+            $table->string('direct_supervisor');
             $table->timestamps();
         });
 
         Schema::create('performance_information', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained()->onDelete('cascade');
-            $table->string('evaluasi_kinerja');
-            $table->string('penghargaan');
+            $table->string('performance_evaluation');
+            $table->string('award');
             $table->timestamps();
         });
 
         Schema::create('additional_information', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained()->onDelete('cascade');
-            $table->string('asuransi_kesehatan');
-            $table->string('dana_pensiun');
+            $table->string('health_insurance');
+            $table->string('pension_fund');
             $table->timestamps();
         });
 
         Schema::create('family_information', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained()->onDelete('cascade');
-            $table->string('status_perkawinan');
-            $table->integer('jumlah_anak');
+            $table->string('married_status');
+            $table->integer('total_children');
             $table->timestamps();
         });
     }

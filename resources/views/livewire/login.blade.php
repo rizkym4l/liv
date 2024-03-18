@@ -1,5 +1,5 @@
 
-    <section class="border-red-500 bg-gray-800 min-h-screen flex items-center justify-center">
+    <section class="border-red-500 min-h-screen flex items-center justify-center">
     
       <div class="bg-gray-100 p-5 flex rounded-2xl shadow-lg max-w-3xl">
         <div class="md:w-1/2 px-5">

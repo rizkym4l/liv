@@ -65,10 +65,10 @@ class AddKaryawan extends Component
 
 
         Employee::create([
-            'nama' => $this->nama,
-            'jabatan' => $this->jabatan,
-            'departemen' => $this->departement,
-            'tanggal_bergabung' => $this->tanggalBergabung,
+            'name' => $this->nama,
+            'position' => $this->jabatan,
+            'departement' => $this->departement,
+            'join_date' => $this->tanggalBergabung,
 
 
         ]);
@@ -79,32 +79,32 @@ class AddKaryawan extends Component
 
         EmployeesDetail::create([
             'employee_id' => $karyawanID,
-            'status_karyawan' => $arrStatus[0],
-            'gaji' => $arrStatus[1],
-            'atasan_langsung' => $arrStatus[2],
+            'karyawan_status' => $arrStatus[0],
+            'salary' => $arrStatus[1],
+            'direct_supervisor' => $arrStatus[2],
 
         ]);
         sleep(.2);
 
         FamilyInformation::create([
             'employee_id' => $karyawanID,
-            'status_perkawinan' => $arrFam[0],
-            'jumlah_anak' => $arrFam[1],
+            'married_status' => $arrFam[0],
+            'total_children' => $arrFam[1],
 
         ]);
         sleep(.2);
 
         AdditionalInformation::create([
             'employee_id' => $karyawanID,
-            'asuransi_kesehatan' => $arrAdd[0],
-            'dana_pensiun' => $arrAdd[1] ,
+            'health_insurance' => $arrAdd[0],
+            'pension_fund' => $arrAdd[1] ,
             
         ]);
         sleep(.2);
         PerformanceInformation::create([
             'employee_id' => $karyawanID,
-            'evaluasi_kinerja' => $arrPer[0],
-            'penghargaan' => $arrPer[1] ,
+            'performance_evaluation' => $arrPer[0],
+            'award' => $arrPer[1] ,
             
         ]);
 

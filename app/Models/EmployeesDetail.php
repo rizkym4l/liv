@@ -9,5 +9,5 @@ class EmployeesDetail extends Model
 {
     use HasFactory;
     protected $table = 'employee_details';
-    protected $fillable = ['employee_id','status_karyawan','gaji','atasan_langsung'];
+    protected $fillable = ['employee_id','karyawan_status','salary','direct_supervisor'];
 }

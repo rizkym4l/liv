@@ -11,7 +11,7 @@ protected $listener = ['store','edit'];
 public  $search = '';
     public function render()
     {
-        $karyawan = Employee::where('nama','like','%' . $this->search . '%')->simplePaginate(8);
+        $karyawan = Employee::where('name','like','%' . $this->search . '%')->paginate(8);
         return view('livewire.karyawan-table', [
             'karyawan' => $karyawan
         ]);

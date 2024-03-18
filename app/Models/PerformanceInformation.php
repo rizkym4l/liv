@@ -9,6 +9,6 @@ class PerformanceInformation extends Model
 {
     use HasFactory;
     protected $table = 'performance_information';
-    protected $fillable = ['employee_id','evaluasi_kinerja','penghargaan'];
+    protected $fillable = ['employee_id','performance_evaluation','award'];
 
 }
