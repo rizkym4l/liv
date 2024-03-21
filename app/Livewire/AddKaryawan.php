@@ -72,7 +72,7 @@ class AddKaryawan extends Component
 
 
         ]);
-        sleep(.2);
+        sleep(.1);
 
         $karyawanID = Employee::orderBy('id', 'DESC')->first()->getAttribute('id');
 
@@ -84,7 +84,7 @@ class AddKaryawan extends Component
             'direct_supervisor' => $arrStatus[2],
 
         ]);
-        sleep(.2);
+        sleep(.1);
 
         FamilyInformation::create([
             'employee_id' => $karyawanID,
@@ -92,7 +92,7 @@ class AddKaryawan extends Component
             'total_children' => $arrFam[1],
 
         ]);
-        sleep(.2);
+        sleep(.1);
 
         AdditionalInformation::create([
             'employee_id' => $karyawanID,
@@ -100,7 +100,7 @@ class AddKaryawan extends Component
             'pension_fund' => $arrAdd[1] ,
             
         ]);
-        sleep(.2);
+        sleep(.1);
         PerformanceInformation::create([
             'employee_id' => $karyawanID,
             'performance_evaluation' => $arrPer[0],

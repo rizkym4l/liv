@@ -264,10 +264,10 @@
                 <div class="flex justify-between mb-4">
                     <div>
                         <div class="flex items-center mb-1">
-                            <div class="text-2xl font-semibold">324</div>
+                            <div class="text-2xl font-semibold">{{$countEmployee}}</div>
                             <div class="p-1 rounded bg-emerald-500/10 text-emerald-500 text-[12px] font-semibold leading-none ml-2">+30%</div>
                         </div>
-                        <div class="text-sm font-medium text-gray-400">Visitors</div>
+                        <div class="text-sm font-medium text-gray-400">Emplooyee</div>
                     </div>
                     <div class="dropdown">
                         <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600"><i class="ri-more-fill"></i></button>

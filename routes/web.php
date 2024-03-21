@@ -31,7 +31,10 @@ Route::middleware('auth')->group(function(){
     Route::get('/dashboard', function () {
         return view('karyawan.dashboard');
     })->name('dashboard');
-    Route::get('/logout', [Login::class, 'logout']);
+    Route::get('/detail/{id}', function ($id) {
+        return view('karyawan.detail',compact('id'));
+    })->name('detail');
+    Route::get('/logout', [Login::class, 'logout'])->name('logout');
 });
 // 
 

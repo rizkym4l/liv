@@ -83,7 +83,7 @@
                             <a href="#" wire:click='delete({{ $item->id }})'
                                 class="font-medium text-red-600 hover:underline">Delete</a>
 
-                            <a href="#" wire:click='deatil({{ $item->id }})'
+                            <a href={{ route('detail',$item->id) }}
                                 class="font-medium text-green-600 hover:underline">Detail</a>
                         </td>
                     </tr>
