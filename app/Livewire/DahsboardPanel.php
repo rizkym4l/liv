@@ -7,11 +7,15 @@ use Livewire\Component;
 
 class DahsboardPanel extends Component
 {
+    public  $countEmployee ;
+   public function mount(){
+   $this->countEmployee = Employee::count();
 
-   
-    public  $countEmployee = '2';
+   }
     public function render()
     {
-        return view('livewire.dahsboard-panel');
+        return view('livewire.dahsboard-panel',[
+            'countEmployee' => $this->countEmployee
+        ]);
     }
 }
